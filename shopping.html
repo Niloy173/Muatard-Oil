@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHopping</title>
+    <link rel="stylesheet" type="text/css" href="./css/shopping.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/payment.css"/>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+</head>
+<body>
+
+    <nav id="navbarId" style="background-color: #f1f1f1;">
+        <div class="navbar" id="navbar-content">
+          
+          <a  id="sidebar" class="side-three-icon" onclick="openSidebar()">&#9776</a>
+          <a href="index.html" id="logo"><img src="./images/195260289_952747075517082_4000494032215260164_n.png"></a>
+          <div class="icon-bar">
+            
+  
+            <span class="nav-notification">
+              <a onclick="showCard()" id="shooping_card" href="#"><i  class="material-icons">shopping_cart</i></a>
+              </span>
+      
+            <span class="nav-notification">
+              <a href="#"><i 	class="material-icons">&#xe7f7</i></a></span>
+            
+            <span id="logInIcon" class="nav-notification"><a href="./index.html"><i class="large material-icons">home</i></a></span>
+            <span style="display: none;"  id="profileIcon" class="nav-notification"><a onclick="open_profile()" href="#"><i class="large material-icons">account_circle</i></a></span>
+          </div>
+        </div>
+  
+        <section id="content-section-id" class="content-section">
+        
+       
+          <div class="content-part" id="nav-section">
+            <a id="close" href="javascript:void(0)" class="closebtn" onclick="close_sidebar()">&times</a>
+            <span><a href="./company.html" class="nav-item">Our company</a></span>
+            <span><a href="./brand.html" class="nav-item">Brands</a></span>
+            <span> <a href="./shopping.html" class="nav-item">Shopping</a></span>
+            <!-- <span><a href="" class="nav-item">News</a></span> -->
+            <span> <a href="./about.html" class="nav-item">About</a></span>
+            <a href="search.html" class="nav-item">
+              <i class="fa fa-search Searching"></i>
+            </a>
+           
+          </div>
+          
+          <script src="./javascript/navbar.js"></script>
+          
+        </section>
+
+  
+        
+      </nav>
+
+      <!-- profile section -->
+    <div class="from-profile" id="profile_section_popup">
+
+      <form class="form-container-profile">
+
+       <div class="close_section" style="height: 40px;">
+        <span style="float: right; "> <a style="text-decoration: none; font-size: 30px; font-weight: bold; color: black;" id="close" href="javascript:void(0)" onclick="close_login()">&times</a></span>
+       </div>
+        <div class="space-around"></div>
+        <!-- <div class="profile_name">
+          <h4>Mr.x</h4>
+        </div>  -->
+        
+        <div class="profile_pannel">
+          <div  class="profile_section" id="profile_icon">
+            <span  class="material-icons">
+              person
+              </span><a style="text-decoration: none; margin-left: 15px; color: black;" href="./user_profile.html">  Profile</a>
+              
+              
+          </div>
+          <div class="profile_section" id="order_icon">
+            <span  class="material-icons">
+              <span class="material-icons">
+                shopping_bag
+                </span>
+              </span><a style="text-decoration: none; margin-left: 18px; color: black;" href="./user_order.html">  Order</a>
+              
+          </div>
+
+          <div class="profile_section" id="logout_icon">
+            <span  class="material-icons">
+              lock
+              </span><a id="signOut" style="text-decoration: none; margin-left: 15px; color: black;" href="#">  Logout</a>
+              
+          </div>
+
+        </div>
+        
+      
+      </form>
+    </div>
+
+
+      <section>
+
+        <div class="shopping-cover">
+
+            <img src="./images/oil.jpg" alt="shopping"/>
+        </div>
+      </section>
+
+
+      <section>
+
+        <div class="shopping-page-selection">
+            <span><a href="index.html">Home</a> </span>
+            <span ><a id="Shop_id" class="same" href="#">Shop</a></span>
+            <span><a id="Oil_id"  class="same " href="#">Oil</a></span>
+        </div>
+      </section>
+
+
+    
+      <!-- product section -->
+
+      <div class="product-row">
+
+        <div class="product-column">
+            <div class="card">
+                <img  src="./images/mus1.jpg" alt="mustard-1"/>
+                <h5 id="product_name">Dhaka Dough Mustard Oil</h5>
+                <p class="price">৳<span id="product_cost"> 192</span><span id="product_quantity"> (500 ml)</span></p>
+                <button id="addbtn" onclick="AddToCart(1)">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-column">
+            <div class="card">
+                <img  src="./images/mus2.jpg" alt="mustard-1"/>
+                <h5 id="product_name">Khaas food Mustard Oil</h5>
+                <p   class="price">৳<span id="product_cost"> 255</span><span id="product_quantity"> (1 liter)</span></p>
+                <button id="addbtn" onclick="AddToCart(2)">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-column">
+            <div class="card">
+                <img   src="./images/mus_3.jpg" alt="mustard-1"/>
+                <h5 id="product_name">Radhuni Pure Mustard Oil</h5>
+                <p  class="price">৳<span id="product_cost"> 165</span><span id="product_quantity"> (500 ml)</span></p>
+                <button id="addbtn" onclick="AddToCart(3)">Add to Cart</button>
+            </div>
+        </div>
+
+      </div>
+
+
+
+
+      <div class="space"></div>
+
+
+      <div class="product-row">
+
+        <div class="product-column">
+            <div class="card">
+                <img id="product_image" src="./images/shere.png" alt="mustard-1"/>
+                <h5 id="product_name">shera Bangla Pure Mustard Oil</h5>
+                <p  class="price">৳<span id="product_cost"> 192</span><span id="product_quantity"> (500 ml)</span></p>
+                <button id="addbtn" onclick="AddToCart(4)">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-column">
+            <div class="card">
+                <img   src="./images/fresh.jpg" alt="mustard-1"/>
+                <h5 id="product_name">Fresh Mustard Oil</h5>
+                <p class="price">৳<span id="product_cost"> 205</span> <span  id="product_quantity"> (500 ml)</span></p>
+                <button id="addbtn" onclick="AddToCart(5)">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-column">
+            <div class="card">
+                <img  src="./images/Shaad-Mustard-Oil.jpg" alt="mustard-1"/>
+                <h5 id="product_name">Shaad Mustard Oil</h5>
+                <p  class="price">৳<span id="product_cost"> 225</span><span id="product_quantity"> (1 litr)</span>  </p>
+                <button id="addbtn" onclick="AddToCart(6)">Add to Cart</button>
+            </div>
+        </div>
+
+      </div>
+
+      <div class="space"></div>
+
+
+      <!-- payment section  -->
+
+
+      <div id="payment"  class="payment_div">
+        <div class="payment_container">
+          <h4>Total Payment
+          <span class="price" style="color: black;">
+          <!-- <i class="fa fa-shopping-cart"></i> -->
+          <b id="price_amount_total"></b>
+        </h4>
+        <br>
+    
+    
+        <!-- <div class="demo">
+          <p class="accept_head">Accepted cards</p>
+        </div> -->
+        
+        <div class="payment_type_check">
+          
+         <div class="payment_category">
+         
+           <div class="first">
+            <input id="radio1" checked onclick="option1()" type="radio" id="visa_master" name="money_type" />
+            <label id="text" for="visa_master">Visa or Master card</label>
+            <label id="card_type1" for="visa_master">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+            </label>
+           </div>
+      
+          <br>
+    
+    
+           <div class="first">
+            <input id="radio2" onclick="option2()"  type="radio" id="native_master" name="money_type" />
+            <label id="text" for="native_master">Bkash or Nogod</label>
+            <label id="card_type2" for="native_master">
+             <img src="./images/bkash.png">
+             <img src="./images/nogod.png">
+            </label>
+           </div>
+    
+           <br>
+    
+    
+           <div id="western" class="for_visa_master">
+    
+           <form action="#">
+              <input required type="text" id="cname" placeholder="Name on Card">
+    
+            <input type="text" id="ccnum" placeholder="Credit card number">
+    
+            <input  type="text" id="expmonth" placeholder="Expiray data: dd-mm-yyyy">
+    
+    
+            <input  type="password" id="cvv" placeholder="CVV number">
+
+            <input   onclick="ConfirmOrder()" type="submit"  value="Continue to checkout" class="btn">
+    
+            <input  onclick="cancelFunc()" value="Cancel" class="btn2">
+           </form>
+           </div>
+    
+           <div id="native" class="for_native_card">
+    
+           <form action="#">
+            <input type="password" id="pin" placeholder="Pin Number" >
+    
+            <input id="confirmBtn" onclick="ConfirmOrder()" type="submit" value="Continue to checkout" class="btn">
+            <input id="cancelbtn2" onclick="cancelFunc()" value="Cancel" class="btn2">
+           </form>
+           </div>
+    
+         </div>
+        </div>
+    
+        
+        
+        </span>
+        </div>
+      </div>
+
+
+      <!-- payment section ends here -->
+
+
+
+      <footer class="footer-section">
+        <div class="footer-left">
+          <h3>The<strong><span><i style="font-style:oblique"> Mustard Oil </strong></i></span>Company</h3>
+          <p class="footer-links">
+            <a href="./index.html" class="link-1">Home</a>
+            <a href="#" class="link-2">Contact</a>
+            <a href="./about.html" class="link-3">About</a>
+            <a href="#" class="link-4">FAQ</a>
+          </p>
+ 
+          <p class="footer-company-name">
+            All rights recived By Oil Company @ 2021
+          </p>
+        </div>
+ 
+        
+ 
+        <div class="footer-center">
+ 
+         <div >
+           <i class="fa fa-map-marker"></i>
+           <p><span>44/1 S.point road Banani,Dhaka</span></p>
+         </div>
+ 
+         <div >
+           <i class="fa fa-phone"></i>
+           <p>+88019xxxxxxx</p>
+         </div>
+ 
+         <div>
+           <i class="fa fa-envelope"></i>
+           <p><a href="mailto:support@company.com">support@company.com</a></p>
+         </div>
+ 
+        </div>
+ 
+        
+ 
+ 
+        <div class="footer-right">
+          <p class="footer-company-about">
+            <span>About the Company</span>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore expedita qui quia sint ad, quasi consectetur iste amet illo animi fugiat molestiae! Dignissimos autem ullam ea tempore similique vel ut.
+          </p>
+ 
+          <div class="footer-icons">
+ 
+           <a href="#"><i class="fa fa-facebook"></i></a>
+           <a href="#"><i class="fa fa-twitter"></i></a>
+           <a href="#"><i class="fa fa-linkedin"></i></a>
+           <a href="#"><i class="fa fa-github"></i></a>
+          </div>
+        </div>
+      </footer>
+
+
+      <!-- product add to card -->
+
+      <div id="product_card_id" class="product_choosing_card">
+
+       
+        
+          <span 
+          style="text-align: center; 
+          font-size: 15px;
+           position: absolute; 
+           top: 10px; 
+           font-weight: bold;
+           left: 20px;">Product Cart</span>
+        
+        <span style="float: right;"> <a id="close" href="javascript:void(0)" class="closebtn" onclick="close_product()">&times</a></span>
+      
+        <div class="line"></div>
+        
+        <div id="status" class="product-status">
+          <p class="msg">No items Here</p>
+        </div>
+
+        <div id="list_item" class="row_product">
+
+         
+          <!-- <div class="column col_number">
+            <p>
+              <span> 1 </span> <a href="#">+</a> <a href="#"> - </a>
+            </p>
+          </div>
+
+
+          <div class="column col_item">
+
+            <p id="Item_name">hello</p>
+            <p id="Quantity">I am niloy</p>
+          </div>
+
+
+          <div class="column col_prize">
+
+            <p id="prize">$ 145</p>
+          </div> -->
+        </div>
+
+        <!-- total amount to  pay -->
+        <div id="place-id-amount" class="place-amount">
+          <div style="flex: 50%;" class="column-amount">
+            <span id="placeAmountHead">Total amount <b>:</b> </span>
+          </div>
+          <div style="flex: 50%;" class="column-amount">
+            <span id="placeAmountValue"></span>
+          </div>
+        </div>
+
+
+        <!-- place order block -->
+
+        <div id="ConfirmOrder" class="place-order">
+          <button onclick="OpenPayment()" id="placeBtn">Place Order</button>
+        </div>
+      </div>
+
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+     
+        <script>
+
+                firebase.initializeApp({
+
+                apiKey: "AIzaSyD1vvNqGE1HH0AWzA0EECbqUIf5XefVPfc",
+                authDomain: "mustard-0il.firebaseapp.com",
+                projectId: "mustard-0il",
+                storageBucket: "mustard-0il.appspot.com",
+                messagingSenderId: "867154909460",
+                appId: "1:867154909460:web:e921c08154d131e4dd4a01",
+                measurementId: "G-TCKT9D8JLN"
+                })
+
+                var auth = firebase.auth();
+                // var user = auth.currentUser;
+
+                
+
+                firebase.auth().onAuthStateChanged(user => {
+                if(user) {
+                  document.getElementById('logInIcon').style.display = "none";
+                  document.getElementById('profileIcon').style.display="block";
+                }else
+                {
+                  document.getElementById('logInIcon').style.display = "block";
+                  document.getElementById('profileIcon').style.display="none";
+                }
+              });
+
+              const signOut = document.getElementById('signOut');
+                  signOut.addEventListener('click',function(e){
+
+                     firebase.auth().signOut().then(function() {
+                            window.location = "./index.html";
+                          }, function(error) {
+                            console.error('Sign Out Error', error);
+                          });
+              });
+                
+        </script>
+
+
+
+     
+
+      <script  src="./javascript/shopping.js"></script>
+
+
+    
+</body>
+</html>

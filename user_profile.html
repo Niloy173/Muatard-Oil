@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+
+    <link rel="stylesheet" type="text/css" href="./css/profilePage.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div
+      style="
+        background-image: url(./images/cover1.png);
+        background-attachment: fixed;
+      "
+    >
+      <nav>
+        <div class="logo-profile">
+          <a href="#">
+            <img src="./images/profileImage.jpg" />
+          </a>
+        </div>
+      </nav>
+
+      <main>
+        <div class="demo-container" style="max-width: 500px; margin: auto">
+          <h1>Personal Information</h1>
+          <hr />
+
+          <!-- name part -->
+          <div class="input-container">
+            <div class="column1">
+              <i class="fa fa-user icon"></i>
+            </div>
+            <div class="column2" id="nameId"></div>
+          </div>
+
+          <br />
+          <!-- email part -->
+          <div class="input-container">
+            <div class="column1">
+              <i class="fa fa-envelope icon"></i>
+            </div>
+            <div class="column2" id="emailId"></div>
+          </div>
+
+          <br />
+          <!-- contact part -->
+          <div class="input-container">
+            <div class="column1">
+              <i class="fa fa-phone icon"></i>
+            </div>
+            <div class="column2" id="contactId"></div>
+          </div>
+
+          <br />
+          <!-- address part -->
+          <div class="input-container">
+            <div class="column1">
+              <i class="fa fa-address-book icon"></i>
+            </div>
+            <div class="column2" id="addressId"></div>
+          </div>
+        </div>
+      </main>
+
+      <br />
+
+      <div class="link-section">
+        <a href="./index.html">
+          <i class="fa fa-home footer-icon"></i>
+        </a>
+
+        <a class="link" href="./company.html">
+          <i class="fa fa-building footer-icon"></i>
+        </a>
+
+        <a class="link" href="./brand.html">
+          <i class="fa fa-bandcamp footer-icon"></i>
+        </a>
+
+        <a class="link" href="./search.html">
+          <i class="fa fa-search footer-icon"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- footer section -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    <script>
+      firebase.initializeApp({
+        apiKey: "AIzaSyD1vvNqGE1HH0AWzA0EECbqUIf5XefVPfc",
+        authDomain: "mustard-0il.firebaseapp.com",
+        projectId: "mustard-0il",
+        storageBucket: "mustard-0il.appspot.com",
+        messagingSenderId: "867154909460",
+        appId: "1:867154909460:web:e921c08154d131e4dd4a01",
+        measurementId: "G-TCKT9D8JLN",
+      });
+
+      var auth = firebase.auth();
+      var db = firebase.database();
+
+      var Uname = document.getElementById("nameId");
+      var Uemail = document.getElementById("emailId");
+      var Ucontact = document.getElementById("contactId");
+      var Uaddress = document.getElementById("addressId");
+
+      //   var userId = db
+      //     .ref("/users/" + user.userId)
+      //     .once("value")
+      //     .then(function (snapshot) {
+      //       console.log(snapshot.email);
+      //     });
+
+      firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+          var userId = db.ref("/users/" + user.uid);
+
+          userId.once("value", function (snapshot) {
+            snapshot.forEach(function (child) {
+              if (child.key == "email") {
+                Uemail.innerHTML = child.val();
+              }
+
+              if (child.key == "address") {
+                // console.log(child.val());
+                Uaddress.innerHTML = child.val();
+              }
+              if (child.key == "fullname") {
+                Uname.innerHTML = child.val();
+              }
+
+              if (child.key == "contact") {
+                // console.log(child.val());
+                Ucontact.innerHTML = child.val();
+              }
+            });
+          });
+        } else {
+        }
+      });
+    </script>
+  </body>
+</html>

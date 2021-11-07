@@ -1,0 +1,111 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo img {
+  width: 130px;
+  margin: 50px 0px 0px 0px;
+  border-radius: 50%;
+}
+
+.summery-paragraph {
+  padding: 20px 30px 0 30px;
+  font-size: 1.125rem;
+
+  letter-spacing: 2;
+}
+.summery-paragraph p {
+  line-height: 1.7888;
+}
+@media (max-width: 700px) {
+  .summery-paragraph {
+    padding: 20px 0;
+  }
+  .summery-paragraph p {
+    line-height: 1.6663;
+  }
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column {
+  float: left;
+  width: 25%;
+  height: 70vh;
+  /* background-color: aliceblue; */
+  margin-top: 30px;
+  margin-bottom: 180px;
+}
+.column p {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#prize-summary {
+  float: right;
+  margin-right: 12%;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+.P_quantity {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin: 20px 0px;
+}
+.P_prize {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin: 16px 0px;
+}
+.P_name {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin: 20px 0px;
+}
+.P_status {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin: 20px 0px;
+  padding: 0 40px;
+  text-align: center;
+  
+}
+.color_red{
+  color: red;
+  font-weight: 500;
+}
+.color_green{
+  color: green;
+  font-weight: 500;
+}
+.P_status span{
+
+  border: 1px solid rgb(122, 255, 133);
+}
+
+@media (max-width: 700px) {
+  .P_name {
+    font-size: 16.2px;
+  }
+  .P_prize {
+    font-size: 16.5px;
+  }
+  .P_quantity {
+    font-size: 16px;
+  }
+  .P_status {
+    font-size: 16px;
+  }
+  .column p {
+    font-size: 15px;
+  }
+}

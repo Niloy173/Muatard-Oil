@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./css/user_order.css" />
+    <link rel="stylesheet" type="text/css" href="./css/profilePage.css"/>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="./company.html">
+          <img
+            src="./images/195260289_952747075517082_4000494032215260164_n.png"
+          />
+        </a>
+      </div>
+    </nav>
+
+
+    <div class="summery-paragraph">
+      <p>This section is providing you the list of the purchased Item You have
+        Ordered from this website Until now.You can feel free to browse yourself and
+      find out the status of your order and quantity section about which product has been 
+    ordered how many times. The status will give you the confirmation about the product
+  has delivered or not well it might get somedays late for some temporary issue but 
+other than that our service will be much more reliable I can ensure you.Thank You </p>
+    </div>
+
+    <div class="row">
+      <div id="quantityId" class="column">
+        <p class="head">Quantity</p>
+      </div>
+      <div id="nameId" class="column">
+        <p class="head">Oil Type</p>
+      </div>
+      <div id="prizeId" class="column">
+        <p class="head">Prize</p>
+      </div>
+
+      <div id="pstatus" class="column">
+        <p class="head">Status</p>
+      </div>
+    </div>
+
+    <!-- <div id="SummId" class="total-prize">
+      <span style="display: none" id="prize-summary"></span>
+    </div> -->
+
+
+    <div class="link-section">
+        <a href="./index.html">
+          <i class="fa fa-home footer-icon"></i>
+        </a>
+
+        <a class="link" href="./company.html">
+          <i class="fa fa-building footer-icon"></i>
+        </a>
+
+        <a class="link" href="./brand.html">
+          <i class="fa fa-bandcamp footer-icon"></i>
+        </a>
+
+        <a class="link" href="./search.html">
+          <i class="fa fa-search footer-icon"></i>
+        </a>
+      </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    <script>
+      firebase.initializeApp({
+        apiKey: "AIzaSyD1vvNqGE1HH0AWzA0EECbqUIf5XefVPfc",
+        authDomain: "mustard-0il.firebaseapp.com",
+        projectId: "mustard-0il",
+        storageBucket: "mustard-0il.appspot.com",
+        messagingSenderId: "867154909460",
+        appId: "1:867154909460:web:e921c08154d131e4dd4a01",
+        measurementId: "G-TCKT9D8JLN",
+      });
+    </script>
+
+    <script  src="./javascript/user_order.js" ></script>
+  </body>
+</html>

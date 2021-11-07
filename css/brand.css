@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.brands-content {
+  width: 100%;
+  position: relative;
+}
+.mybrand {
+  width: 100%;
+  z-index: 0;
+}
+
+.type-text {
+  position: absolute;
+  left: 20px;
+  bottom: 15px;
+
+  width: 100%;
+
+  font-size: 20px;
+  color: #f2f2f2;
+}
+
+.space {
+  margin-top: 100px;
+}
+
+.section {
+  -webkit-animation-name: fade-shadow;
+  -webkit-animation-duration: 1.4s;
+  animation-name: fade-shadow;
+  animation-duration: 1.4s;
+}
+@keyframes fade-shadow {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-shadow {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.categories {
+  padding: 20px 20px;
+  margin: 0px 100px;
+}
+.categories .name-category h2::before {
+  content: "|";
+  font-weight: 600;
+  font-size: 30px;
+
+  left: 0;
+  color: rgb(24, 132, 199);
+
+  padding-right: 10px;
+}
+.categories .type-of-oil {
+  margin: 0px 0px 10px 40px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.type-of-oil span a {
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 22px;
+  color: #000;
+}
+.type-of-oil span {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+/* .type-of-oil span a:hover {
+  padding: 5px;
+  border-bottom: 2px solid red;
+} */
+
+.type-of-oil span a.active {
+  padding: 5px;
+  border-bottom: 5px solid red;
+}
+
+.oil-container {
+  position: relative;
+  margin-top: 20px;
+}
+.oil-container img {
+  vertical-align: middle;
+}
+
+.oil-container .oil-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  opacity: 0.7;
+  color: white;
+  padding: 30px;
+}
+.brands-content .mybrand img {
+  margin-top: 180px;
+  height: 400px;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .brands-content .mybrand img {
+    margin-top: 100px;
+    height: 280px;
+  }
+  .type-of-oil span a {
+    font-size: 13px;
+  }
+  .categories {
+    margin: 0px 30px;
+  }
+}
+
+@media (max-width :500px)
+{
+  .categories{
+    margin: 0px 10px;
+  }
+
+  .categories .type-of-oil{
+    margin: 0;
+  }
+
+ 

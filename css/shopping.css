@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.space {
+  padding: 20px 0px;
+}
+
+.shopping-cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shopping-cover img {
+  margin-top: 170px;
+  width: 50%;
+}
+.shopping-page-selection {
+  margin: 30px 25px;
+  padding: 30px;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.shopping-page-selection span {
+  /* padding: 0px 20px; */
+  font-weight: bold;
+}
+.shopping-page-selection span a {
+  text-decoration: none;
+  color: black;
+}
+
+.shopping-page-selection span a.same::before {
+  content: "|";
+  display: inline-block;
+  padding: 0px 5px;
+  font-weight: 600;
+  font-size: 25px;
+
+  color: rgb(24, 132, 199);
+}
+
+.shopping-page-selection {
+  text-align: center;
+}
+
+.product-row::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.card .price {
+  color: gray;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.product-row .card h5 {
+  font-size: 20px;
+}
+.card button {
+  border: none;
+  outline: 0;
+  padding: 10px;
+  color: white;
+  background-color: #000;
+
+  text-align: center;
+  width: 100%;
+  margin-top: 5px;
+}
+.card button:hover {
+  opacity: 0.6;
+}
+.product-column .card img {
+  height: 300px;
+}
+
+.product-row .card {
+  text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+  .product-column .card img {
+    height: 80px;
+  }
+
+  .product-row .card h5 {
+    font-size: 12px;
+  }
+
+  .product-row .card .price {
+    font-size: 10px;
+  }
+  .shopping-page-selection {
+    text-align: center;
+  }
+  .product-column {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .product-row .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    max-width: 280px;
+    margin: auto;
+    text-align: center;
+    font-family: sans-serif;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .shopping-page-selection {
+    text-align: left;
+  }
+  .product-column {
+    float: left;
+    width: 33.33%;
+  }
+
+  .product-row .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: sans-serif;
+  }
+
+  .product-column .card img {
+    height: 150px;
+  }
+  .product-row .card {
+    padding: 5px;
+  }
+
+  .card .price {
+    font-size: 12px;
+  }
+
+  .product-row .card h5 {
+    font-size: 1rem;
+  }
+}
+
+#product_card_id {
+  /* width: 20%; */
+  background-color: rgb(216, 223, 230);
+  border: 1px solid black;
+  margin: auto;
+  z-index: 7;
+  position: fixed;
+  top: 16.3333%;
+  right: 15%;
+  scroll-behavior: smooth;
+}
+@media screen and (max-width: 768px) {
+  #product_card_id {
+    display: none;
+    width: 65%;
+    top: 21.333%;
+    right: 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  #Item_name {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 701px) {
+  #Item_name {
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (min-device-width: 769px) {
+  #product_card_id {
+    display: none;
+    width: 30%;
+    top: 16%;
+  }
+}
+
+#placeBtn {
+  display: none;
+  width: 100%;
+  border: none;
+  color: rgb(11, 12, 14);
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  background-color: rgb(235, 162, 79);
+}
+.place-amount {
+  display: none;
+  border: none;
+  color: rgb(11, 12, 14);
+  padding: 10px 20px 20px 20px;
+  font-size: 16px;
+  cursor: pointer;
+
+  background-color: #ffffff;
+}
+#placeAmountHead {
+  display: none;
+  flex: 50%;
+  text-align: center;
+}
+#placeAmountValue {
+  display: none;
+  flex: 50%;
+  margin-left: 30px;
+  text-align: center;
+}
+.product-status {
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+}
+.product-status p {
+  text-align: center;
+}
+.closebtn {
+  text-decoration: none;
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  font-size: 25px;
+  margin-left: 40px;
+  cursor: pointer;
+  color: rgb(19, 19, 19);
+  font-weight: bold;
+}
+
+.col_number {
+  width: 15%;
+  text-align: center;
+}
+.col_item {
+  width: 50%;
+  text-align: center;
+}
+.col_prize {
+  width: 25%;
+  text-align: center;
+}
+
+.col_delete {
+  width: 10%;
+  cursor: pointer;
+}
+
+.column {
+  float: left;
+  height: 70px;
+  margin-top: 20px;
+}
+
+#status {
+  display: none;
+}
+
+.line {
+  height: 40px;
+  width: 100%;
+  border-width: 0;
+
+  background-color: rgb(235, 162, 79);
+}
+
+.borderLine {
+  height: 75px;
+  width: 100%;
+  border-width: 0;
+  background-color: aliceblue;
+}
+#list_item {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  height: 400px;
+}

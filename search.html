@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/search.css" />
+    
+  </head>
+  <body>
+
+    <nav id="navbarId" style="background-color: #f1f1f1;">
+        <div class="navbar" id="navbar-content">
+          
+          <a  id="sidebar" class="side-three-icon" onclick="openSidebar()">&#9776</a>
+          <a href="index.html" id="logo"><img src="./images/195260289_952747075517082_4000494032215260164_n.png"></a>
+          <div class="icon-bar">
+            
+  
+            <span class="nav-notification">
+              <a href="#"><i onclick="shopping_section()" class="material-icons">shopping_cart</i></a>
+              </span>
+      
+            <span class="nav-notification">
+              <a href="#"><i 	class="material-icons">&#xe7f7</i></a></span>
+            
+            <span id="logInIcon" class="nav-notification"><a href="./index.html"><i class="large material-icons">home</i></a></span>
+            <span style="display: none;"  id="profileIcon" class="nav-notification"><a onclick="open_profile()" href="#"><i class="large material-icons">account_circle</i></a></span>
+          </div>
+        </div>
+  
+        <section class="content-section">
+        
+       
+          <div class="content-part" id="nav-section">
+            <a id="close" href="javascript:void(0)" class="closebtn" onclick="close_sidebar()">&times</a>
+            <span><a href="./company.html" target="_blank" class="nav-item">Our company</a></span>
+            <span><a href="./brand.html" class="nav-item">Brands</a></span>
+            <span> <a href="./shopping.html" class="nav-item">Shopping</a></span>
+            <!-- <span><a href="" class="nav-item">News</a></span> -->
+            <span> <a href="./about.html" class="nav-item">About</a></span>
+            <a href="./search.html" class="nav-item">
+              <i class="fa fa-search Searching"></i>
+            </a>
+           
+          </div>
+          
+          <script src="./javascript/navbar.js"></script>
+        </section>
+  
+        
+      </nav>
+
+
+      <section>
+        <!-- search option -->
+
+        <div class="search" >
+          
+            <div class="child-search">
+
+              <div class="real-search">
+
+                <input width="100%" id="Search" type="search" placeholder="Search">
+              </div>
+
+              
+            </div>
+          
+         
+        </div>
+
+        <!-- profile data -->
+      <div class="from-profile" id="profile_section_popup">
+
+        <form id="profile_popup_id" class="form-container-profile">
+  
+         <div class="close_section" style="height: 40px;">
+          <span style="float: right; "> <a style="text-decoration: none; font-size: 30px; font-weight: bold; color: black;" id="close" href="javascript:void(0)" class="closebtn" onclick="close_login()">&times</a></span>
+         </div>
+          <div class="space-around"></div>
+          <!-- <div class="profile_name">
+            <h4>Mr.x</h4>
+          </div>  -->
+          
+          <div class="profile_pannel">
+            <div  class="profile_section" id="profile_icon">
+              <span  class="material-icons">
+                person
+                </span><a style="text-decoration: none; margin-left: 15px; color: black;" href="./user_profile.html">  Profile</a>
+                
+                
+            </div>
+            <div class="profile_section" id="order_icon">
+              <span  class="material-icons">
+                <span class="material-icons">
+                  shopping_bag
+                  </span>
+                </span><a style="text-decoration: none; margin-left: 18px; color: black;" href="./user_order.html">  Order</a>
+                
+            </div>
+  
+            <div class="profile_section" id="logout_icon">
+              <span  class="material-icons">
+                lock
+                </span><a id="signOut" style="text-decoration: none; margin-left: 15px; color: black;" href="#">  Logout</a>
+                
+            </div>
+  
+          </div>
+          
+        
+        </form>
+      </div>
+
+
+
+
+        <!-- drop down menu -->
+
+        <div class="dropdown">
+
+          
+            <p  >All Content Type <i  onclick="dropfunction()" id="drop"  class="fa fa-caret-down  droptext" aria-hidden="true"></i></p>
+            <div id="content" class="dropdown-content">
+              <a href="./brand.html">Brands</a>
+              <a href="#">FAQ</a>
+              <a href="#">Policy</a>
+              <a href="#">Report</a>
+
+              <script src="./javascript/search_dropdown.js"></script>
+          </div>
+
+
+          
+         
+
+          
+
+
+        </div>
+      </section>
+
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+   
+      <script>
+
+              firebase.initializeApp({
+
+              apiKey: "AIzaSyD1vvNqGE1HH0AWzA0EECbqUIf5XefVPfc",
+              authDomain: "mustard-0il.firebaseapp.com",
+              projectId: "mustard-0il",
+              storageBucket: "mustard-0il.appspot.com",
+              messagingSenderId: "867154909460",
+              appId: "1:867154909460:web:e921c08154d131e4dd4a01",
+              measurementId: "G-TCKT9D8JLN"
+              })
+
+              var auth = firebase.auth();
+              // var user = auth.currentUser;
+
+              
+
+              firebase.auth().onAuthStateChanged(user => {
+              if(user) {
+                document.getElementById('logInIcon').style.display = "none";
+                document.getElementById('profileIcon').style.display="block";
+              }else
+              {
+                document.getElementById('logInIcon').style.display = "block";
+                document.getElementById('profileIcon').style.display="none";
+              }
+            });
+
+            const signOut = document.getElementById('signOut');
+                signOut.addEventListener('click',function(e){
+
+                   firebase.auth().signOut().then(function() {
+                          window.location = "./index.html";
+                        }, function(error) {
+                          console.error('Sign Out Error', error);
+                        });
+            });
+
+            
+              
+      </script>
+      <script>
+        function close_login()
+          {
+              document.getElementById("profile_section_popup").style.display = "none";
+          }
+          function shopping_section()
+          {
+              alert('Go To Shopping section');
+              window.location="./shopping.html";
+          }
+      </script>
+
+
+
+  </body>
+</html>

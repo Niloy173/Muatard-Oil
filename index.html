@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mustard Oil</title>
+  
+   <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    
+  </head>
+  <body>
+    <!-- logo part -->
+
+    <nav id="navbarId" style="background-color: #f1f1f1;">
+      <div class="navbar" id="navbar-content">
+        
+        <a  id="sidebar" class="side-three-icon" onclick="openSidebar()">&#9776</a>
+        <a  href="#" id="logo"><img src="./images/195260289_952747075517082_4000494032215260164_n.png"></a>
+        <div class="icon-bar">
+          
+
+          <span class="nav-notification">
+            <a  href="#"><i onclick="shopping_section()" class="material-icons">shopping_cart</i></a>
+            </span>
+    
+          <span class="nav-notification">
+            <a href="#"><i 	class="material-icons">&#xe7f7</i></a></span>
+          
+          <span id="logInIcon"  class="nav-notification"><a onclick="open_login()" href="#"><i class="material-icons">&#xe7fe</i></a></span>
+          <span style="display: none;"  id="profileIcon" class="nav-notification"><a onclick="open_Home()" href="./index.html"><i class="large material-icons">home</i></a></span>
+        
+        </div>
+      </div>
+
+      <section class="content-section" id="nav-content-section">
+      
+     
+        <div class="content-part" id="nav-section">
+          <a id="close" href="javascript:void(0)" class="closebtn" onclick="close_sidebar()">&times</a>
+          <span><a href="./company.html" class="nav-item">Our company</a></span>
+          <span><a href="./brand.html" class="nav-item">Brands</a></span>
+          <span> <a href="./shopping.html" class="nav-item">Shopping</a></span>
+          <!-- <span><a href="" class="nav-item">News</a></span> -->
+          <span> <a href="./about.html" class="nav-item">About</a></span>
+          <a href="./search.html" class="nav-item">
+            <i class="fa fa-search Searching"></i>
+          </a>
+         
+        </div>
+        
+        
+      </section>
+
+      
+    </nav>
+
+
+
+    
+    <div  class="container-section-one">
+
+      <img src="./images/cover1.png" alt="soyabean" style="width: 100%; margin-top: 50px; padding-top: 50px;">
+      <div class="top-left">
+       <p>
+        working together to create a better health for our people, our communities and our planet.
+       </p>
+      </div>
+      <div class="text-block">
+        <h3>Pure Soyabean Oil</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quaerat, natus fuga, sit corporis tempora quos est ut delectus iusto facilis dolorem aperiam voluptates architecto pariatur voluptatem. Blanditiis, eligendi dicta minus temporibus modi placeat provident, eum et natus quaerat reiciendis.</p>
+      </div>
+      
+        
+    </div>
+
+  
+
+
+
+    <!-- section-two -->
+    
+
+    <div class="container-section-two">
+      <img src="./images/oil_cover.jpg" alt="soyabean" style="width: 100%;">
+      <div class="text-block">
+        <h3>Pure Soyabean Oil</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quaerat, natus fuga, sit corporis tempora quos est ut delectus iusto facilis dolorem aperiam voluptates architecto pariatur voluptatem. Blanditiis, eligendi dicta minus temporibus modi placeat provident, eum et natus quaerat reiciendis.</p>
+      </div>
+
+    </div>
+
+
+
+
+    <!-- login page -->
+
+    <div class="form-popup" id="popup">
+
+      <form id="form-content" class="form-container">
+
+
+        <span><h2 style="text-align: center;">Login</h2></sapn>
+       <span style="float: right;"> <a id="close" href="javascript:void(0)" class="closebtn" onclick="close_login()">&times</a></span>
+
+       <br>
+        <label for="email"><b>Email</b></label>
+        <input id="UserEmail" type="text" placeholder="Enter your email" name="email" required>
+
+        <label for="pass"><b>Password</b></label>
+        <input id="UserPass" type="password" placeholder="Enter your password" name="pass" required>
+
+        <button id="login" class="btn">Login</button>
+        <span class="forget_pass"><a id="forget" href="#">forget your password ?</a></span>
+        <span class="sign_pass"><a id="signup" href="./registration.html">SignUp</a></span>
+
+      </form>
+
+      
+     
+    </div>
+
+
+    <!-- profile section -->
+    <!-- <div class="from-profile" id="profile_section_popup">
+
+      <form class="form-container-profile">
+
+       <div class="close_section" style="height: 40px;">
+        <span style="float: right; "> <a style="text-decoration: none; font-size: 30px; font-weight: bold; color: black;" id="close" href="javascript:void(0)" class="closebtn" onclick="close_login()">&times</a></span>
+       </div>
+        <div class="space-around"></div> -->
+        <!-- <div class="profile_name">
+          <h4>Mr.x</h4>
+        </div>  -->
+        
+        <!-- <div class="profile_pannel">
+          <div  class="profile_section" id="profile_icon">
+            <span  class="material-icons">
+              person
+              </span><a style="text-decoration: none; margin-left: 4px; color: black;" href="#">  profile</a>
+              
+              
+          </div>
+          <div class="profile_section" id="order_icon">
+            <span  class="material-icons">
+              <span class="material-icons">
+                shopping_bag
+                </span>
+              </span><a style="text-decoration: none; margin-left: 6px; color: black;" href="#">  Order</a>
+               -->
+          <!-- </div>
+
+          <div class="profile_section" id="logout_icon">
+            <span  class="material-icons">
+              lock
+              </span><a id="signOut" style="text-decoration: none; margin-left: 4px; color: black;" href="#">  signout</a>
+              
+          </div>
+
+        </div>
+        
+      
+      </form>
+    </div> -->
+
+
+    
+
+
+     <!-- footer section -->
+
+     <footer class="footer-section">
+       <div class="footer-left">
+         <h3>The<strong><span><i style="font-style:oblique"> Mustard Oil </strong></i></span>Company</h3>
+         <p class="footer-links">
+           <a href="#" class="link-1">Home</a>
+           <a href="#" class="link-2">Contact</a>
+           <a href="#" class="link-3">About</a>
+           <a href="#" class="link-4">FAQ</a>
+         </p>
+
+         <p class="footer-company-name">
+           All rights recived By Oil Company @ 2021
+         </p>
+       </div>
+
+       
+
+       <div class="footer-center">
+
+        <div >
+          <i class="fa fa-map-marker"></i>
+          <p><span>44/1 S.point road Banani,Dhaka</span></p>
+        </div>
+
+        <div >
+          <i class="fa fa-phone"></i>
+          <p>+88019xxxxxxx</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@company.com">support@company.com</a></p>
+        </div>
+
+       </div>
+
+       
+
+
+       <div class="footer-right">
+         <p class="footer-company-about">
+           <span>About the Company</span>
+           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore expedita qui quia sint ad, quasi consectetur iste amet illo animi fugiat molestiae! Dignissimos autem ullam ea tempore similique vel ut.
+         </p>
+
+         <div class="footer-icons">
+
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-github"></i></a>
+         </div>
+        </div>
+     </footer>
+
+    
+
+
+     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+     <script>
+                firebase.initializeApp({
+
+                    apiKey: "AIzaSyD1vvNqGE1HH0AWzA0EECbqUIf5XefVPfc",
+                    authDomain: "mustard-0il.firebaseapp.com",
+                    projectId: "mustard-0il",
+                    storageBucket: "mustard-0il.appspot.com",
+                    messagingSenderId: "867154909460",
+                    appId: "1:867154909460:web:e921c08154d131e4dd4a01",
+                    measurementId: "G-TCKT9D8JLN"
+                    })
+
+                    
+                    var auth = firebase.auth();
+                    var db = firebase.database();
+                   
+                    
+                    
+                    function EmailCheck(value)
+                    {
+                      let expression = /^[^@]+@\w+(\.\w+)+\w$/
+                      if(expression.test(value) == true)
+                      {
+                        return value;
+                      }else{
+                        
+                        alert('please provide valid email address');
+                        return;
+                      }
+                    }
+
+                    function PasswordLength(value)
+                    {
+                      if(value.length <6)
+                      {
+                        alert('Please provide at least 6digit for password');
+                        return;
+                      }else
+                      {
+                        return value;
+                      }
+                    }
+
+                    // const log = document.getElementById("login")
+                    // log.onclick = function(){
+
+                          const SignInForm = document.querySelector('#form-content');
+                          SignInForm.addEventListener("submit",function(e){
+
+                          
+                           e.preventDefault();
+                          let email = EmailCheck(SignInForm['UserEmail'].value);
+                          let pass = PasswordLength(SignInForm['UserPass'].value);
+
+                          // console.log(`${email} | ${pass}`);
+
+                          auth.signInWithEmailAndPassword(email,pass)
+                          .then(function(){
+
+                            
+                            // alert('User Logged in');
+
+                            window.location = "./company.html";
+
+                            
+                            
+
+                          })
+                          .catch(function(error){
+
+                            var error_code = error.code;
+                            var error_message = error.message;
+
+                            // alert(`${error_code} | ${error_message}`);
+                            if (error_code === 'auth/wrong-password') {
+                                alert('Wrong password.');
+                              } else {
+                                alert(error_message);
+                              }
+                              console.log(error);
+                            document.getElementById('form-content').reset();
+                            
+                          })
+
+                          
+                  
+
+
+                        });
+
+              firebase.auth().onAuthStateChanged(user => {
+                if(!user) {
+                  alert("Please Sign in First")
+                }
+              });
+
+
+              // const signOut = document.getElementById('signOut');
+              //     signOut.addEventListener('click',function(e){
+
+              //        firebase.auth().signOut().then(function() {
+              //               window.location = "./index.html";
+              //             }, function(error) {
+              //               console.error('Sign Out Error', error);
+              //             });
+              // });
+
+              function open_login()
+              {
+                  
+                  firebase.auth().onAuthStateChanged(user => {
+
+                    if(!user)
+                    {
+
+                      document.getElementById("popup").style.display="block";
+                      document.getElementById("popup").style.zIndex="99";
+
+                    }else{
+
+                      alert("Already Signed In");
+                    }
+                  
+                  })
+
+                  //document.getElementById("nav-content-section").style.display="none";
+                  
+              }
+     </script>
+     <script>
+       function shopping_section()
+        {
+            alert('Go To Shopping section');
+            window.location="./shopping.html";
+        }
+     </script>
+
+    
+    <!-- <script type="module" src="./javascript/index.js"></script> -->
+    <script src="./javascript/navbar.js"></script>
+    
+   
+
+   
+    
+  </body>
+</html>
