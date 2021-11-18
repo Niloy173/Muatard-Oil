@@ -392,14 +392,8 @@ function close_login()
 function ConfirmOrder()
 {
 
-    firebase.auth().onAuthStateChanged(user => {
-        if (!user) {
-
-            alert("You need To Sign In First");
-            window.location = "./index.html";
-            
-        }else
-        {
+   
+       
             let Data = row_content.querySelectorAll('.child-content');
             let ArrData = [...Data];
             
@@ -456,8 +450,8 @@ function ConfirmOrder()
            
             // window.location = "../user_order.html";
 
-        }
-    });
+        
+
 
    
 
@@ -468,6 +462,14 @@ function ConfirmOrder()
 function OpenPayment()
 {
 
+    firebase.auth().onAuthStateChanged(user => {
+
+    if (!user) {
+
+        alert("You need To Sign In First");
+        window.location = "./index.html";
+        
+    }else{
            
 
             let v = document.getElementById('placeAmountValue').innerHTML
@@ -476,6 +478,10 @@ function OpenPayment()
             document.getElementById('product_card_id').style.display = "none";
 
             document.getElementById('payment').style.display = "block";
+
+    }
+
+});
 
             
             
