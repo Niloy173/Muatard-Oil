@@ -392,7 +392,7 @@ function close_login()
 function ConfirmOrder()
 {
 
-   
+    firebase.auth().onAuthStateChanged(user => {
        
             let Data = row_content.querySelectorAll('.child-content');
             let ArrData = [...Data];
@@ -428,7 +428,6 @@ function ConfirmOrder()
                 
 
                 
-                alert('Thank you for order.Please check the order history for your product status');
                
                 // console.log(`${S_name} | ${S_prize} | ${S_quantity}`)
         
@@ -445,10 +444,15 @@ function ConfirmOrder()
             console.log(Arr)
             // showCard();
             
-            
+            alert('Thank you for order.Please check the order history for your product status');
+            document.getElementById("payment").style.display = "none";
+
            
            
             // window.location = "../user_order.html";
+
+
+    });
 
         
 
