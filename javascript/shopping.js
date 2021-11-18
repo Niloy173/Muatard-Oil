@@ -396,7 +396,7 @@ function ConfirmOrder()
         if (!user) {
 
             alert("You need To Sign In First");
-            window.location = "../index.html";
+            window.location = "./index.html";
             
         }else
         {
@@ -434,7 +434,7 @@ function ConfirmOrder()
                 
 
                 
-
+                alert('Thank you for order.Please check the order history for your product status');
                
                 // console.log(`${S_name} | ${S_prize} | ${S_quantity}`)
         
@@ -452,14 +452,14 @@ function ConfirmOrder()
             // showCard();
             
             
-            
+           
            
             // window.location = "../user_order.html";
 
         }
     });
 
-    alert('Thank you for order.Please check the order history for your product status');
+   
 
     
 }
