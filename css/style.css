@@ -123,18 +123,18 @@
     height: 40%;
     width: 0;
     z-index: 1;
-    top: 0;
     left: 0;
     background-color: rgb(21, 20, 20);
     overflow-x: hidden;
     padding-top: 50px;
     transition: 0.3s;
     position: fixed;
+    
   }
   .content-part a {
     padding: 8px 8px 7px 20px;
     text-decoration: none;
-    color: #000000;
+    color: #f1f1f1;
     font-size: 20px;
     display: block;
     transition: 0.2s;
