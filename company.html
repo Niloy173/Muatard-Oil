@@ -37,7 +37,7 @@
           </div>
         </div>
   
-        <section class="content-section">
+        <section id="content-section-id"  class="content-section">
         
        
           <div class="content-part" id="nav-section">
@@ -47,9 +47,9 @@
             <span> <a href="./shopping.html" class="nav-item">Shopping</a></span>
             <!-- <span><a href="" class="nav-item">News</a></span> -->
             <span> <a href="./about.html" class="nav-item">About</a></span>
-            <a href="./search.html" class="nav-item">
+            <!-- <a href="./search.html" class="nav-item">
               <i class="fa fa-search Searching"></i>
-            </a>
+            </a> -->
            
           </div>
           
@@ -220,7 +220,7 @@
    
            <div >
              <i class="fa fa-phone"></i>
-             <p>+88019xxxxxxx</p>
+             <p> Contact No : +88019xxxxxxx</p>
            </div>
    
            <div>
@@ -290,6 +290,7 @@
                             window.location = "./index.html";
                           }, function(error) {
                             console.error('Sign Out Error', error);
+                            alert("There has been an error");
                           });
               });
 
