@@ -141,9 +141,7 @@
     margin: 5px 0px 5px 0px;
   }
 
-  .nav-item i {
-    display: none;
-  }
+
   .content-part a:hover {
     color: #f1f1f1;
   }
@@ -204,20 +202,18 @@
     display: block;
     text-align: center;
     padding: 25px 10px 20px 10px;
-    font-size: 1.2rem;
+    font-size: 1.334rem;
     text-decoration: none;
-    color: #000000;
+    color: #000;
+    margin-left: 10px;
+    margin-right: 10px;
   }
   .nav-notification {
     margin-right: 20px;
   }
 }
 
-@media screen and (max-width: 768px) {
-  #Searching {
-    display: none;
-  }
-}
+
 
 .nav-option .nav-notification a :hover {
   border-bottom: 10px solid rgb(211, 12, 12);
@@ -416,7 +412,7 @@
   font-weight: 400;
   vertical-align: middle;
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .footer-section .footer-center p span {
@@ -590,25 +586,15 @@
 
 @media screen and (min-width: 457px) {
   #popup {
-    top: 16.3333%;
+    
+    top: 15.3333%;
     right: 0px;
   }
-  #profile_section_popup {
-    top: 16.3333%;
-    right: 0px;
-  }
+
+  
 }
 
-@media screen and (max-width: 456px) {
-  #popup {
-    top: 21.9999%;
-    right: 0px;
-  }
-  #profile_section_popup {
-    top: 21.9999%;
-    right: 0px;
-  }
-}
+
 
 .from-profile {
   display: none;
@@ -617,7 +603,11 @@
   transition: 0.3s;
   border: 3px solid #f1f1f1;
   z-index: 7;
+  right: 0;
+  margin-top: 105px;
 }
+
+
 .form-container-profile {
   max-width: 300;
   background-color: white;
@@ -651,4 +641,33 @@
 }
 #logout_icon {
   padding: 33px 20px;
+}
+
+@media screen and (max-width: 456px) {
+  #popup {
+    top: 21.9999%;
+    right: 0px;
+  }
+ 
+
+}
+
+@media screen and (max-width :769px)
+{
+
+
+  .from-profile{
+
+    margin-top: 108px;
+  }
+
+
+}
+
+@media screen and (max-width :460px)
+{
+  .from-profile{
+
+    margin-top: 150px;
+  }
 }

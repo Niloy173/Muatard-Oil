@@ -24,6 +24,8 @@
   }
   .summery-paragraph p {
     line-height: 1.6663;
+    margin: 0 10px;
+    text-align: justify;
   }
 }
 
