@@ -31,6 +31,23 @@ function onresizeable()
 
 }
 
+// remove content function when user scroll down 70px
+
+window.onscroll = function() {scrollfunction()};
+
+function scrollfunction()
+{
+    if (document.body.scrollTop >= 80 || document.documentElement.scrollTop >=80)
+    {
+        
+        document.getElementById("content-section-id").style.display="none";
+    }else
+    {
+        document.getElementById("content-section-id").style.display="block";
+        
+
+    }
+}
 
 
 

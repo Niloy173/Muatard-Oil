@@ -59,18 +59,34 @@ function Append_obj(itemName,itemQuantity,itemPrize)
     
 }
 
+window.onscroll = function() {scrollfunction()};
 
-function scrolfunc(){
-
-    if(document.body.scrollTop >= 80 || document.documentElement.scrollTop >=80)
+function scrollfunction()
+{
+    if (document.body.scrollTop >= 80 || document.documentElement.scrollTop >=80)
     {
-        document.getElementById("content-section-id").style.display="none"
-        document.getElementById("product_card_id").style.display = "none";
-    }else{
-        document.getElementById("content-section-id").style.display="block"
         
+        document.getElementById("content-section-id").style.display="none";
+    }else
+    {
+        document.getElementById("content-section-id").style.display="block";
+        
+
     }
 }
+
+
+// function scrolfunc(){
+
+//     if(document.body.scrollTop >= 80 || document.documentElement.scrollTop >=80)
+//     {
+//         document.getElementById("content-section-id").style.display="none"
+//         document.getElementById("product_card_id").style.display = "none";
+//     }else{
+//         document.getElementById("content-section-id").style.display="block"
+        
+//     }
+// }
 
 let item_container = [];
 var row_content = document.getElementById("list_item");
