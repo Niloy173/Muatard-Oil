@@ -12,7 +12,7 @@ const parentStatusDiv = document.getElementById("pstatus");
 let sum = 0;
 let ArrayData_cut = [];
 let ArrayData_real = [];
-let Random_arr = ["Pending","Delivered","Pending","Delivered"]
+let Random_arr = ["Pending","Pending","Pending","Delivered"]
 
 function createQuantityBlock(value)
 {
