@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+ 
 }
 
 .brands-content {
@@ -15,7 +16,7 @@
 
 .type-text {
   position: absolute;
-  left: 20px;
+  left: 0;
   bottom: 15px;
 
   width: 100%;
