@@ -337,6 +337,30 @@
               });
 
 
+
+              var username = "";
+              firebase.auth().onAuthStateChanged(user =>{
+
+                if(user)
+                {
+                  var userId = db.ref("/users/" + user.uid);
+
+                      userId.once("value",function(snapshot){
+
+
+                        snapshot.forEach(function(element) {
+
+                          if(element.key == "fullname")
+                          {
+                            username = element.val();
+                          }
+                          
+                        });
+                      })
+                }
+              })
+
+
               // const signOut = document.getElementById('signOut');
               //     signOut.addEventListener('click',function(e){
 
@@ -349,6 +373,7 @@
 
               function open_login()
               {
+              
                   
                   firebase.auth().onAuthStateChanged(user => {
 
@@ -360,7 +385,9 @@
 
                     }else{
 
-                      alert("Already Signed In");
+                      
+
+                      alert(`Already Signed in  ${username}`);
                     }
                   
                   })
