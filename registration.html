@@ -18,6 +18,10 @@
     />
   </head>
   <body>
+    <div id="homelink">
+      <button onclick="GoHome()" class="home-page">Home</button>
+    </div>
+
     <nav>
       <div class="logo">
         <a href="./index.html">
@@ -81,7 +85,7 @@
         <div class="input-container">
           <input
             type="number"
-            placeholder="11 digit number"
+            placeholder="11 digit number (01681183***)"
             name="contact"
             id="UserContact"
             required
@@ -207,6 +211,8 @@
 
               alert("User Created");
 
+              document.getElementById("homelink").style.display = "block";
+
               //window.location = "./index.html";
             })
             .catch(function (error) {
@@ -227,6 +233,10 @@
 
         registerForm.reset();
       });
+
+      function GoHome() {
+        window.location.replace("./index.html");
+      }
     </script>
   </body>
 </html>

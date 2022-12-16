@@ -89,3 +89,15 @@ hr {
 .space {
   margin-bottom: 5px;
 }
+
+#homelink {
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+.home-page {
+  border: none;
+  border-bottom: 1px solid #000;
+  background: none;
+  cursor: pointer;
+}
